@@ -1,12 +1,16 @@
-<div class="min-h-[80vh] font-bold  px-6 py-3 ">
+<div class="min-h-[80vh] font-bold px-6 py-3">
   @for(announcement of announcements; track announcement.id){
-    <div>
-      <h2>{{ announcement.title }}</h2>
-      <p>{{ announcement.description }}</p>
+  <div>
+    <h2>{{ announcement.title }}</h2>
+    <p>{{ announcement.description }}</p>
 
-      <img [src]="announcement.imageCover">
-
-    </div>
+    <img class="w-25" [src]="announcement.imageCover" [alt]="announcement.title" />
+    <p [ngClass]="announcement.dailyPrice < 50 ? 'text-green-600' : ''">
+      {{
+        announcement.dailyPrice | currency : "EUR" : "symbol" : "1.2-2" : "fr"
+      }}
+    </p>
+  </div>
   }
   {{ title }}
 </div>
