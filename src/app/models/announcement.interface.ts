@@ -17,9 +17,7 @@ export default interface Announcement {
   maxClient: number
   dailyPrice: number
   imageCover: string
-  user: User
   images: Image[]
   services: Service[]
-  equipment: Equipment[]
-  reservations: Reservation[]
+  equipments: Equipment[]
 }
