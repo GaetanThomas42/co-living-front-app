@@ -1,16 +1,8 @@
-<div class="font-bold px-6 py-3">
-  @for(announcement of announcements; track announcement.id){
-  <div>
-    <h2>{{ announcement.title }}</h2>
-    <p>{{ announcement.description }}</p>
+<h1>  {{ title }} </h1>
 
-    <img class="w-25" [src]="announcement.imageCover" [alt]="announcement.title" />
-    <p [class.text-green-600]="announcement.dailyPrice < 50">
-      {{
-        announcement.dailyPrice | currency : "EUR" : "symbol" : "1.2-2" : "fr"
-      }}
-    </p>
-  </div>
+<div class="font-bold px-6 py-3">
+  @for(a of announcements; track a.id){
+    <app-announcement-item [announcement]="a" ></app-announcement-item>
   }
-  {{ title }}
+
 </div>
