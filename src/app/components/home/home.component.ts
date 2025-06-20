@@ -14,8 +14,6 @@ import { AnnouncementService } from '../../services/announcement.service';
 })
 export class HomeComponent implements OnInit {
 
-
-
   private announcementService: AnnouncementService = inject(AnnouncementService);
 
   title: string = 'Mes annonces';
