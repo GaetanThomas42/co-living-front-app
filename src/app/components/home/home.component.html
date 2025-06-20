@@ -1,6 +1,7 @@
 <h1>  {{ title }} </h1>
 
 <div class="font-bold px-6 py-3">
+  
   @for(a of announcements; track a.id){
     <app-announcement-item [announcement]="a" ></app-announcement-item>
   }

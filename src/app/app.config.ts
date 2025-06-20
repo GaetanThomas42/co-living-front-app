@@ -12,7 +12,6 @@ registerLocaleData(localeFr);
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-
     provideHttpClient(), // Faire des requetes HTTP
     provideRouter(routes) // Activer le routing
   ]
