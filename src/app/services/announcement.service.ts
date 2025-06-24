@@ -14,7 +14,7 @@ export class AnnouncementService {
     return this.httpClient.get<Announcement[]>('http://51.254.112.67/api/announcements',
       {
         headers: {'accept': 'application/json'},
-        
+
       });
   }
 
